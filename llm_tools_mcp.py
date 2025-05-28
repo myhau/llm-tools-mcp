@@ -11,13 +11,6 @@ import json
 from mcp import ClientSession, ListToolsResult, StdioServerParameters, stdio_client, Tool
 from pydantic import BaseModel, Field
 
-# Create server parameters for stdio connection
-server_params = StdioServerParameters(
-    command="python",  # Executable
-    args=["example_server.py"],  # Optional command line arguments
-    env=None,  # Optional environment variables
-)
-
 
 class ServerConfig(BaseModel):
     command: str = Field()
@@ -30,7 +23,7 @@ class McpConfigType(BaseModel):
 
 
 class McpConfig:
-    def __init__(self, path = "~/.llm-mcp/mcp.json"):
+    def __init__(self, path = "~/.llm-tools-mcp/mcp.json"):
         config_file_path = Path(path).expanduser()
         with open(config_file_path) as config_file:
             unparsed_config = config_file.read()
@@ -95,7 +88,7 @@ def create_tool_for_mcp(server_name: str, mcp_client: McpClient, mcp_tool: mcp.T
         name=mcp_tool.name,
         description=mcp_tool.description,
         input_schema=mcp_tool.inputSchema,
-        plugin="mcp",
+        plugin="llm-tools-mcp",
         implementation=impl
     )
 

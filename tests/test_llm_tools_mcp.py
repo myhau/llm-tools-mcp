@@ -8,7 +8,7 @@ import asyncio
 from pathlib import Path
 
 import pytest
-from llm_mcp import McpConfig, McpClient
+from llm_tools_mcp import McpConfig, McpClient
 
 def test_integration():
     # Create a temporary directory with 2 test files

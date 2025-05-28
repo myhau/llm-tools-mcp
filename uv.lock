@@ -260,13 +260,12 @@ wheels = [
 ]
 
 [[package]]
-name = "llm-mcp"
-version = "0.1"
+name = "llm-tools-mcp"
+version = "0.1.0a1"
 source = { editable = "." }
 dependencies = [
     { name = "llm" },
     { name = "mcp", extra = ["cli"] },
-    { name = "pytest" },
 ]
 
 [package.optional-dependencies]
@@ -278,7 +277,6 @@ test = [
 requires-dist = [
     { name = "llm" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.9.1" },
-    { name = "pytest", specifier = ">=8.3.5" },
     { name = "pytest", marker = "extra == 'test'" },
 ]
 provides-extras = ["test"]

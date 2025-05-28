@@ -7,11 +7,25 @@
 
 MCP support for LLM CLI tool.
 
+
+## To do
+
+- [ ] Release alpha version
+- [ ] Redirect output from mcp sdk to file or some proper location
+- [ ] Reuse connections
+- [ ] Support non-stdio MCP servers
+- [ ] Get feedback on `~/.llm-tools-mcp` directory name
+- [ ] Better failure handling
+    - [ ] When connection to MCP server fails
+    - [ ] When `mcp.json` is invalid
+- [ ] Better README.md
+    - [ ] [[#Development]] section should mention uv (?)
+
 ## Installation
 
 Install this plugin in the same environment as [LLM](https://llm.datasette.io/).
 ```bash
-llm install llm-mcp
+llm install llm-tools-mcp
 ```
 ## Usage
 
@@ -21,7 +35,7 @@ Usage instructions go here.
 
 To set up this plugin locally, first checkout the code. Then create a new virtual environment:
 ```bash
-cd llm-mcp
+cd llm-tools-mcp
 python -m venv venv
 source venv/bin/activate
 ```
