@@ -11,6 +11,7 @@
 
 MCP support for LLM CLI tool.
 
+<img src="./demo.svg">
 
 ## To do
 
