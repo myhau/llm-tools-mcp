@@ -6,8 +6,7 @@ import json
 import os
 import asyncio
 from pathlib import Path
-from config import McpConfig, McpClient
-
+from llm_mcp import McpConfig, McpClient
 
 def test_omg():
     print("asd")
