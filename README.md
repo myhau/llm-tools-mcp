@@ -1,8 +1,12 @@
-# llm-mcp
+# llm-tools-mcp
+
+> [!Warn]
+> Work in progress!
+> Only alpha version was released for now.
 
 [![PyPI](https://img.shields.io/pypi/v/llm-mcp.svg)](https://pypi.org/project/llm-mcp/)
-[![Changelog](https://img.shields.io/github/v/release/VirtusLab/llm-mcp?include_prereleases&label=changelog)](https://github.com/VirtusLab/llm-mcp/releases)
-[![Tests](https://github.com/VirtusLab/llm-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/VirtusLab/llm-mcp/actions/workflows/test.yml)
+[![Changelog](https://img.shields.io/github/v/release/myhau/llm-mcp?include_prereleases&label=changelog)](https://github.com/VirtusLab/llm-mcp/releases)
+[![Tests](https://github.com/myhau/llm-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/VirtusLab/llm-mcp/actions/workflows/test.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/VirtusLab/llm-mcp/blob/main/LICENSE)
 
 MCP support for LLM CLI tool.
@@ -10,16 +14,17 @@ MCP support for LLM CLI tool.
 
 ## To do
 
-- [ ] Release alpha version
-- [ ] Redirect output from mcp sdk to file or some proper location
-- [ ] Reuse connections
+- [x] Release alpha version
+- [ ] Good test suite
+- [ ] Redirect stdout/stderr from mcp sdk to file or some proper location
+- [ ] Reuse stdio connections?
 - [ ] Support non-stdio MCP servers
 - [ ] Get feedback on `~/.llm-tools-mcp` directory name
 - [ ] Better failure handling
     - [ ] When connection to MCP server fails
     - [ ] When `mcp.json` is invalid
 - [ ] Better README.md
-    - [ ] [[#Development]] section should mention uv (?)
+    - [ ] [Development](#development) section should mention uv (?)
 
 ## Installation
 
