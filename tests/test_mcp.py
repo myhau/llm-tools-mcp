@@ -6,14 +6,11 @@ import json
 import os
 import asyncio
 from pathlib import Path
+
+import pytest
 from llm_mcp import McpConfig, McpClient
 
-def test_omg():
-    print("asd")
-
-
 def test_integration():
-    print("omg")
     # Create a temporary directory with 2 test files
     with tempfile.TemporaryDirectory() as temp_dir:
         # Create test files in the temporary directory
@@ -26,7 +23,7 @@ def test_integration():
         # Create temporary MCP config file
         with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as config_file:
             mcp_config = {
-                "servers": {
+                "mcpServers": {
                     "filesystem": {
                         "command": "npx",
                         "args": [
