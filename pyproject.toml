@@ -1,0 +1,29 @@
+[project]
+name = "llm-mcp"
+version = "0.1"
+description = "MCP suppor"
+readme = "README.md"
+authors = [{name = "Michal Fudala"}]
+license = "Apache-2.0"
+classifiers = []
+requires-python = ">=3.10"
+dependencies = [
+    "llm",
+    "mcp[cli]>=1.9.1",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/myhau/llm-mcp"
+Changelog = "https://github.com/myhau/llm-mcp/releases"
+Issues = "https://github.com/myhau/llm-mcp/issues"
+CI = "https://github.com/myhau/llm-mcp/actions"
+
+[project.entry-points.llm]
+mcp = "llm_mcp"
+
+[project.optional-dependencies]
+test = ["pytest"]
